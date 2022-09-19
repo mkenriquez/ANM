@@ -244,18 +244,6 @@ p{
     background-color: var(--bgLight);
 }
 /* ET */
-/*! ============= Imagen de titulo ============= */
-
-.pf {
-	text-align: center;
-}
-
-.titulo {
-	color: var(--secondaryBase);
-	font-weight: 700;
-	text-align: center;
-	margin: 60px 0;
-}
 
 /*! ============= Categorias ============= */
 
@@ -264,12 +252,13 @@ p{
 	grid-template-columns: repeat(2, 1fr);
 	gap: 10px;
 	margin-bottom: 50px;
+    text-align: center;
 }
 
 .categoria {
 	cursor: pointer;
 	color: var(--emphasisLight);
-	text-align: justify;
+	text-align: center;
 	padding: 10px;
 	background:transparent;
 	font-weight: 700;
@@ -280,23 +269,11 @@ p{
 	color: var(--emphasisDark);
 }
 
-.categoria:hover path {
-	fill: var(--main);
-}
-
-.categoria path {
-	fill: var(--emphasisDark);
-	transition: .3s ease all;
-}
-
 .categoria.activa {
 	border-bottom: 2px solid var(--emphasisDark);
 	color: #000;
 }
 
-.categoria.activa path {
-	fill: var(--emphasisLight);
-}
 
 /*! ============= Contenedor  ============= */
 .contenedor-preguntas {
