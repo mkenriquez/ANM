@@ -261,20 +261,19 @@ p{
 /*! ============= Categorias ============= */
 
 .categorias {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 10px;
+	display: table;
 	margin-bottom: 50px;
     text-align: center;
 }
 
 .categoria {
+
+    display:table-cell;
 	cursor: pointer;
 	color: var(--emphasisLight);
 	text-align: center;
 	padding: 10px;
 	background:transparent;
-	font-weight: 700;
 }
 
 .categoria:hover {
