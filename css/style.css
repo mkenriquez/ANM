@@ -262,18 +262,21 @@ p{
 
 .categorias {
 	display: table;
+    margin: 0 auto;
 	margin-bottom: 50px;
     text-align: center;
 }
 
 .categoria {
-
     display:table-cell;
+    width: auto;
+    min-height: 47px;
 	cursor: pointer;
 	color: var(--emphasisLight);
 	text-align: center;
-	padding: 10px;
+	padding: 10px 19px 1px 19px;
 	background:transparent;
+    margin-right: 50px;
 }
 
 .categoria:hover {
@@ -282,6 +285,7 @@ p{
 }
 
 .categoria.activa {
+   
 	border-bottom: 2px solid var(--emphasisDark);
 	color: #000;
 }
@@ -329,7 +333,7 @@ p{
 }
 
 .pregunta img {
-	width: 14px;
+	width: 30px;
 }
 
 .respuesta {
