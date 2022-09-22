@@ -1,7 +1,7 @@
 const preguntas = document.querySelectorAll('.preguntas .contenedor-pregunta');
-const categorias = document.querySelectorAll('#categorias .categoria');
+const topics = document.querySelectorAll('#topics .topic');
 const contenedorPreguntas = document.querySelectorAll('.contenedor-preguntas');
-let categoriaActiva = null;
+let topicActiva = null;
 
 preguntas.forEach((pregunta) => {
 	pregunta.addEventListener('click', (e) => {
@@ -11,16 +11,15 @@ preguntas.forEach((pregunta) => {
 		const alturaRealRespuesta = respuesta.scrollHeight;
 		
 		if(!respuesta.style.maxHeight){
-			// Si esta vacio el maxHeight entonces ponemos un valor.
+
 			respuesta.style.maxHeight = alturaRealRespuesta + 'px';
 		} else {
 			respuesta.style.maxHeight = null;
 		}
 
-		// [Opcional] Reiniciamos las demas preguntas
+
 		preguntas.forEach((elemento) => {
-			// Solamente queremos ejecutar el codigo para las preguntas que no 
-			// sean la pregunta a la que le dimos click.
+
 			if(pregunta !== elemento){
 				elemento.classList.remove('activa');
 				elemento.querySelector('.respuesta').style.maxHeight = null;
@@ -33,18 +32,17 @@ preguntas.forEach((pregunta) => {
 
 
 
-categorias.forEach((categoria) => {
-	categoria.addEventListener('click', (e) => {
-		categorias.forEach((elemento) => {
+topics.forEach((topic) => {
+	topic.addEventListener('click', (e) => {
+		topics.forEach((elemento) => {
 			elemento.classList.remove('activa');
 		});
 
 		e.currentTarget.classList.toggle('activa');
-		categoriaActiva = categoria.dataset.categoria;
+		topicActiva = topic.dataset.topic;
 
-		// Activamos el contenedor de preguntas que corresponde
 		contenedorPreguntas.forEach((contenedor) => {
-			if(contenedor.dataset.categoria === categoriaActiva){
+			if(contenedor.dataset.topic ===topicActiva){
 				contenedor.classList.add('activo');
 			} else {
 				contenedor.classList.remove('activo');
